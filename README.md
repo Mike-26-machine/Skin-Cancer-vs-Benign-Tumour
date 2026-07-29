@@ -1,4 +1,4 @@
-# Skin Lesion Classifier — Benign vs Malignant
+# Skin Cancer Classifier — Malignant vs Benign Tumour
 
 GET 324 (Artificial Intelligence and Machine Learning) — Laboratory Exercise 10 Mini-Project
 University of Uyo | Group of 12
@@ -11,7 +11,7 @@ an interactive Streamlit web application.
 
 ## Dataset
 
-**Skin Cancer: Malignant vs Benign** (Kaggle, user `fanconic`), sourced from the ISIC
+**Skin Cancer:Malignant vs Benign Tumour** (Kaggle, user `fanconic`), sourced from the ISIC
 Archive: https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign
 
 Download it and arrange it as:
