@@ -4,12 +4,12 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-SETHESCOPE_ICON = "https://api.iconify.design/lucide:stethoscope.svg?color=%230284c7"   
+STETHOSCOPE_ICON = "https://api.iconify.design/lucide:stethoscope.svg?color=%230284c7"   
 WARNING_ICON = "https://api.iconify.design/lucide:triangle-alert.svg?color=%23b45309"
 # Page setup
 st.set_page_config(
     page_title="Skin Cancer Classifier",
-    page_icon=SETHESCOPE_ICON,
+    page_icon=STETHOSCOPE_ICON,
     layout="centered",
 )
 
@@ -34,15 +34,22 @@ def predict(model, pil_image):
 
 
 # UI
-st.title(SETHESCOPE_ICON + "Skin Cancer Classifier")
+#title
+st.markdown(
+    f'<img src="{STETHOSCOPE_ICON}" width="36" style="vertical-align:middle;margin-right:8px;">'
+    f'<span style="font-size:2rem;font-weight:700;">Skin Cancer Classifier</span>',
+    unsafe_allow_html=True,
+)
 st.write(
     "Upload a dermoscopic image of a skin lesion to classify it as "
     "**Skin cancer** or **Benign tumour**."
 )
 st.warning(
-    WARNING_ICON + "This tool is a student engineering project for educational purposes only. "
-    "It is **not** a medical device and must not be used for real diagnosis. "
-    "Always consult a qualified dermatologist."
+    f'<img src="{WARNING_ICON}" width="18" style="vertical-align:middle;margin-right:6px;">'
+    f'This tool is a student engineering project for educational purposes only. '
+    f'It is <b>not</b> a medical device and must not be used for real diagnosis. '
+    f'Always consult a qualified dermatologist.',
+    unsafe_allow_html=True,
 )
 
 model = load_model()
