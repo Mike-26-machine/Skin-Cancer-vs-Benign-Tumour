@@ -1,27 +1,22 @@
-"""
-GET 324 - Laboratory Exercise 10 (Mini-Project)
-Streamlit app: Skin Cancer (Malignant) vs Benign Tumour Classifier
-Run locally with:  streamlit run app.py
-"""
 
 import streamlit as st
 import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-
+SETHESCOPE_ICON = "https://api.iconify.design/lucide:stethoscope.svg?color=%230284c7"   
+WARNING_ICON = "https://api.iconify.design/lucide:triangle-alert.svg?color=%23b45309"
 # Page setup
 st.set_page_config(
     page_title="Skin Cancer Classifier",
-    page_icon="🩺",
+    page_icon=SETHESCOPE_ICON,
     layout="centered",
 )
 
 IMAGE_SIZE = (224, 224)
-CLASS_NAMES = ["benign tumour", "malignant"]  # must match training folder order
+CLASS_NAMES = ["benign tumour", "malignant"] 
 
 
-# Load the trained model once and cache it across reruns
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model("models/mobilenetv3_transfer.keras")
@@ -39,13 +34,13 @@ def predict(model, pil_image):
 
 
 # UI
-st.title("🩺 Skin Cancer Classifier")
+st.title(SETHESCOPE_ICON + "Skin Cancer Classifier")
 st.write(
     "Upload a dermoscopic image of a skin lesion to classify it as "
     "**Skin cancer** or **Benign tumour**."
 )
 st.warning(
-    "⚠️ This tool is a student engineering project for educational purposes only. "
+    WARNING_ICON + "This tool is a student engineering project for educational purposes only. "
     "It is **not** a medical device and must not be used for real diagnosis. "
     "Always consult a qualified dermatologist."
 )
