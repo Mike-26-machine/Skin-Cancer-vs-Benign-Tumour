@@ -63,11 +63,18 @@ Deployed on Streamlit Community Cloud: **[add your deployed app URL here]**
 
 ## Contributors
 
-| Name | GitHub Username / Registration Number |
-|------|------------------------------------------|
-| _add member 1_ | |
-| _add member 2_ | |
-| ... | |
+| Name | Registration Number |  GitHub Username|
+|------|------------------------------------------|----------|
+| Iboro, Michael Happiness |  22/EG/ME/1773 |
+| Edet, Edidiong|  22/EG/ME/1713 |
+| Charles, Ransom |  22/EG/ME/1763|
+| Edet, Wisdom Oscar|  22/EG/ME/1733|
+| Iheidiohamma, Ikechukwu|  22/EG/ME/1823|
+| James, Henry David|  22/EG/ME/1793 |
+| Baritorge, Emmanuel | 22/EG/ME/1743 |
+| Umoren, Akanimoh | 22/EG/ME/1783 |
+| Ifeanyi, Pleasant | 22/EG/ME/1703 |
+| Ubong, Edmond | 22/EG/ME/1723 |
 
 ## Disclaimer
 
