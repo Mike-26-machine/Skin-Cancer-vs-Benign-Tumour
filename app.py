@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-SETHESCOPE_ICON = "https://api.iconify.design/lucide:stethoscope.svg?color=%230284c7"   
+SETHESCOPE_ICON = "https://api.iconify.design/lucide:stethoscope.svg?color=%230284c7"
 WARNING_ICON = "https://api.iconify.design/lucide:triangle-alert.svg?color=%23b45309"
 # Page setup
 st.set_page_config(

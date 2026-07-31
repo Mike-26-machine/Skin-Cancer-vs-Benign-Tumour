@@ -65,17 +65,18 @@ Deployed on Streamlit Community Cloud: **[add your deployed app URL here]**
 
 | Name | Registration Number |  GitHub Username|
 |------|------------------------------------------|----------|
-| Iboro, Michael Happiness |  22/EG/ME/1773 |
-| Edet, Edidiong|  22/EG/ME/1713 |
-| Charles, Ransom |  22/EG/ME/1763|
-| Edet, Wisdom Oscar|  22/EG/ME/1733|
-| Iheidiohamma, Ikechukwu|  22/EG/ME/1823|
-| James, Henry David|  22/EG/ME/1793 |
-| Baritorge, Emmanuel | 22/EG/ME/1743 |
-| Umoren, Akanimoh | 22/EG/ME/1783 |
-| Ifeanyi, Pleasant | 22/EG/ME/1703 |
-| Ubong, Edmond | 22/EG/ME/1723 |
-
+| Iboro, Michael Happiness |  22/EG/ME/1773 | MIke-26-machine |
+| Edet, Edidiong|  22/EG/ME/1713 | eedidiong26-tech  |
+| Charles, Ransom |  22/EG/ME/1763| ransomcharles68-sketch |
+| Edet, Wisdom Oscar|  22/EG/ME/1733| Ohzzy90 |
+| Iheidiohamma, Ikechukwu|  22/EG/ME/1823| Ikechukwu-7active |
+| James, Henry David|  22/EG/ME/1793 | jah4066-dot |
+| Baritorge, Emmanuel | 22/EG/ME/1743 | emmanuelbaritorge-ops
+| Umoren, Akanimoh | 22/EG/ME/1783 | NxJoe |
+| Ifeanyi, Pleasant | 22/EG/ME/1703 | Pleasantifeanyi-26 |
+| Ubong, Edmond | 22/EG/ME/1723 | Eddyfundz |
+| Assam, Immanuel | 22/EG/ME/1803 | Garix-x |
+| Uffang, Deborah | 22/EG/ME/1693 | Deborah1693 |
 ## Disclaimer
 
 This is a student engineering project built for a machine learning course
