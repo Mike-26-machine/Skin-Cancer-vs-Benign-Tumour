@@ -15,6 +15,3 @@ Streamlit Community Cloud's free tier.
 
 Future improvements could include collecting a larger, more balanced dataset and adding
 Grad-CAM visual explanations to build clinical trust in predictions.
-
----
-*Edit this draft with your group's actual results, challenges, and member names before submission.*
