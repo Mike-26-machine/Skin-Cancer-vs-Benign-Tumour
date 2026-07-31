@@ -4,7 +4,21 @@ Streamlit app: Skin Cancer (Malignant) vs Benign Tumour Classifier
 Run locally with:  streamlit run app.py
 """
 
+import streamlit as st
+import numpy as np
+import tensorflow as tf
+from PIL import Image
 
+
+# Page setup
+st.set_page_config(
+    page_title="Skin Cancer Classifier",
+    page_icon="🩺",
+    layout="centered",
+)
+
+IMAGE_SIZE = (224, 224)
+CLASS_NAMES = ["benign tumour", "malignant"]  # must match training folder order
 
 
 # Load the trained model once and cache it across reruns
