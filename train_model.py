@@ -1,4 +1,65 @@
+"""
+GET 324 - Laboratory Exercise 10 (Mini-Project)
+Binary Image Classification: Skin Cancer (Malignant) vs Benign Tumours
 
+Dataset: "Skin Cancer: Malignant vs Benign" (Kaggle, fanconic)
+          https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign
+
+This script trains a custom CNN AND a MobileNetV3 transfer-learning model,
+compares them, and saves the better one to models/ for the Streamlit app.
+"""
+
+import os
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import tensorflow as tf
+from pathlib import Path
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score,
+    f1_score, classification_report, confusion_matrix
+)
+
+
+# STEP 1: Reproducibility
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
+tf.random.set_seed(SEED)
+os.environ['PYTHONHASHSEED'] = str(SEED)
+
+results_dir = "results/"
+os.makedirs(results_dir, exist_ok=True)
+os.makedirs("models", exist_ok=True)
+
+# STEP 2: Dataset paths — the Kaggle dataset only ships train/ and test/,
+# so we carve a validation split out of train/ using validation_split.
+DATA_DIR = Path("C:\Users\OMEN\OneDrive\Documents\GET324_AI_ML\mini-project 2\data")
+train_dir = DATA_DIR / "train"
+test_dir = DATA_DIR / "test"
+
+IMAGE_HEIGHT = 224
+IMAGE_WIDTH = 224
+BATCH_SIZE = 32
+EPOCHS = 30
+LR = 1e-3
+
+train_dataset = tf.keras.utils.image_dataset_from_directory(
+    train_dir, image_size=(IMAGE_HEIGHT, IMAGE_WIDTH), batch_size=BATCH_SIZE,
+    validation_split=0.2, subset="training", seed=SEED, label_mode="binary",
+)
+val_dataset = tf.keras.utils.image_dataset_from_directory(
+    train_dir, image_size=(IMAGE_HEIGHT, IMAGE_WIDTH), batch_size=BATCH_SIZE,
+    validation_split=0.2, subset="validation", seed=SEED, label_mode="binary",
+)
+test_dataset = tf.keras.utils.image_dataset_from_directory(
+    test_dir, image_size=(IMAGE_HEIGHT, IMAGE_WIDTH), batch_size=BATCH_SIZE,
+    shuffle=False, label_mode="binary",
+)
+
+class_names = train_dataset.class_names  # e.g. ['benign', 'malignant']
+print(f"Classes: {class_names}")
 
 AUTOTUNE = tf.data.AUTOTUNE
 train_dataset = train_dataset.cache().shuffle(1000).prefetch(AUTOTUNE)
