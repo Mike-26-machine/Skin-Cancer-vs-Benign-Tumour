@@ -44,12 +44,18 @@ st.write(
     "Upload a dermoscopic image of a skin lesion to classify it as "
     "**Skin cancer** or **Benign tumour**."
 )
-st.warning(
-    f'<img src="{WARNING_ICON}" width="18" style="vertical-align:middle;margin-right:6px;">'
-    f'This tool is a student engineering project for educational purposes only. '
-    f'It is <b>not</b> a medical device and must not be used for real diagnosis. '
-    f'Always consult a qualified dermatologist.',
-    unsafe_allow_html=True,
+st.markdown(
+    f'''
+    <div style="background-color:#2d2a1e;border-left:4px solid #b45309;padding:12px 16px;border-radius:4px;display:flex;align-items:flex-start;gap:10px;">
+        <img src="{WARNING_ICON}" width="18" style="margin-top:3px;flex-shrink:0;">
+        <span style="color:#d4a017;font-size:0.9rem;">
+            This tool is a student engineering project for educational purposes only.
+            It is <b>not</b> a medical device and must not be used for real diagnosis.
+            Always consult a qualified dermatologist.
+        </span>
+    </div>
+    ''',
+    unsafe_allow_html=True
 )
 
 model = load_model()
