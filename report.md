@@ -1,4 +1,4 @@
-# Project Report (Draft — 100–150 words)
+# Project Report
 
 Our group developed a binary image classifier distinguishing malignant from benign
 skin lesions, using the "Skin Cancer: Malignant vs Benign" dataset from the ISIC
