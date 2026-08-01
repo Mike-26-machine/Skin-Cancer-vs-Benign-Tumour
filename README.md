@@ -59,7 +59,11 @@ streamlit run app.py
 
 ## Deployment
 
-Deployed on Streamlit Community Cloud: **[add your deployed app URL here]**
+Deployed on Streamlit Community Cloud: **https://skin-cancer-vs-benign-tumour.streamlit.app/**
+
+## Project
+
+This project is completely open-source. Access it here **https://github.com/Mike-26-machine/Skin-Cancer-vs-Benign-Tumour**
 
 ## Contributors
 
